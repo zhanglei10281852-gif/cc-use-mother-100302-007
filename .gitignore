@@ -10,3 +10,5 @@ coverage/
 __pycache__/
 *.py[cod]
 .DS_Store
+joint_lab_events.jsonl
+*.jsonl
