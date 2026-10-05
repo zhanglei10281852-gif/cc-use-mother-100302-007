@@ -1,18 +1,14 @@
-"""校企联合实验室成果协同命令行冒烟入口。"""
+"""校企联合实验室成果协同命令行入口。
 
-import json
+不带参数运行时执行端到端示例；完整用法见 `python run_cli.py --help`。
+"""
+
 import sys
-from dataclasses import asdict
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent / "src"))
-from joint_lab import ResearchWorkPackage
 
-
-def main() -> None:
-    item = ResearchWorkPackage(**{'package_code': 'package-code-001', 'program_code': 'program-code-001', 'lead_party': 'lead-party-001', 'state': 'draft'})
-    print(json.dumps({"item": asdict(item), "fingerprint": item.fingerprint()}, ensure_ascii=False, sort_keys=True))
-
+from joint_lab.cli import main
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())

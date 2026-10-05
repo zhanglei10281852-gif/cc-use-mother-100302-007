@@ -4,9 +4,12 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "joint-lab"
-version = "0.1.0"
-description = "校企联合实验室成果协同基础领域契约"
+version = "0.2.0"
+description = "校企联合实验室成果协同服务"
 requires-python = ">=3.11"
+
+[project.scripts]
+joint-lab = "joint_lab.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

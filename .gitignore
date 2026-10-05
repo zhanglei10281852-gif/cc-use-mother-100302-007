@@ -10,3 +10,7 @@ coverage/
 __pycache__/
 *.py[cod]
 .DS_Store
+
+# 协同服务账本存储
+joint_lab_store.json
+joint_lab_store.json.tmp
